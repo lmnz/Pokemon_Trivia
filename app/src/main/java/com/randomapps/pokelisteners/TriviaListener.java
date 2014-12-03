@@ -1,4 +1,4 @@
-package com.randomapps.mainlisteners;
+package com.randomapps.pokelisteners;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,9 +9,9 @@ import com.randomapps.pokemonactivity.TriviaActivity;
 /**
  * Created by wonkyulee on 12/2/14.
  */
-public class TriviaOnClickListener implements View.OnClickListener {
+public class TriviaListener implements View.OnClickListener {
     private Context context;
-    public TriviaOnClickListener(Context context) {
+    public TriviaListener(Context context) {
         this.context = context;
     }
 

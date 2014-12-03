@@ -2,8 +2,11 @@ package com.randomapps.pokemonactivity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.randomapps.pokemontrivia.TriviaChecker;
 import com.randomapps.pokemontrivia.TriviaOptionPopulator;
 
 
@@ -14,7 +17,8 @@ public class TriviaActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trivia);
 
-        TriviaOptionPopulator.setOptions(this, this);
+        TriviaOptionPopulator.setOptions(this);
+        Log.v("set answer", TriviaChecker.getAnswer());
     }
 
     @Override

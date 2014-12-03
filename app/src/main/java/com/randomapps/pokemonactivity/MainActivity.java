@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-import com.randomapps.mainlisteners.TriviaOnClickListener;
+import com.randomapps.pokelisteners.TriviaListener;
 
 
 public class MainActivity extends Activity {
@@ -19,7 +19,7 @@ public class MainActivity extends Activity {
         // POKEDEX BUTTON
         // Starts pokedex activity woop
         final Button button = (Button) findViewById(R.id.pokedex);
-        button.setOnClickListener(new TriviaOnClickListener(this));
+        button.setOnClickListener(new TriviaListener(this));
 
         // this.deleteDatabase("pokemon.db"); // <- this deletes the database making onCreate() run.
     }
