@@ -1,4 +1,4 @@
-package com.randomapps.pokemontrivia;
+package com.randomapps.pokemondb;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -20,7 +20,7 @@ public class PokeSQLiteHelper extends SQLiteOpenHelper {
     private static PokeSchemaService pss;
 
     public PokeSQLiteHelper (Context context) {
-        super(context, "pokemon.db", null, 1);
+        super(context, PokeSchemaService.DB_NAME, null, PokeSchemaService.DB_VERSION);
         pss = PokeSchemaService.getPokeSchemaService(context);
     }
 
@@ -39,7 +39,7 @@ public class PokeSQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // DO NOTHING (for now)
+        // TODO: pokedex upgrade algorithm needs to be written!
     }
 
     public static SQLiteDatabase getConnection() {

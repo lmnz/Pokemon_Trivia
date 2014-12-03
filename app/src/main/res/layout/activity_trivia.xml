@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    tools:context="com.randomapps.pokemonactivity.TriviaActivity">
+
+
+    <TextView android:text="@string/hello_world"
+        android:id="@+id/question"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" />
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false" >
+
+        <RelativeLayout android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1">
+
+            <ImageView android:id="@+id/first_pic"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:contentDescription="first option"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/image3"/>
+
+            <TextView android:text="@string/hello_world"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/first_pic"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/first_text"/>
+
+
+            <ImageView android:id="@+id/third_pic"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:contentDescription="first option"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/first_text"
+                android:src="@drawable/image9"/>
+
+            <TextView android:text="@string/hello_world"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/third_pic"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/third_text"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1">
+
+            <ImageView android:id="@+id/second_pic"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:contentDescription="first option"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/image6"/>
+
+            <TextView android:text="@string/hello_world"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/second_pic"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/second_text"/>
+
+            <ImageView android:id="@+id/fourth_pic"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:contentDescription="fourth option"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/second_text"
+                android:src="@drawable/image150"/>
+
+            <TextView android:text="@string/hello_world"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fourth_pic"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/fourth_text"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

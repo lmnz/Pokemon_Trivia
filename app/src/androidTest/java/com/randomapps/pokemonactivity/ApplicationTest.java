@@ -1,4 +1,4 @@
-package com.randomapps.pokemontrivia;
+package com.randomapps.pokemonactivity;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,35 +1,33 @@
-package com.randomapps.pokemontrivia;
+package com.randomapps.pokemonactivity;
 
 import android.app.Activity;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+
+import com.randomapps.MainOnClickListeners.TriviaOnClickListener;
 
 
-public class PokedexActivity extends Activity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pokedex);
-    }
+        setContentView(R.layout.activity_main);
 
-    public void databaseDerp() {
-        SQLiteDatabase db = openOrCreateDatabase("pokedex", MODE_PRIVATE, null);
-        Cursor c = db.rawQuery("SELECT * FROM Pokedex", null);
-        c.moveToFirst();
-        Log.v("TEST", c.getColumnName(2));
-        c.close();
-    }
+        // POKEDEX BUTTON
+        // Starts pokedex activity woop
+        final Button button = (Button) findViewById(R.id.pokedex);
+        button.setOnClickListener(new TriviaOnClickListener(this));
 
+        // this.deleteDatabase("pokemon.db"); // <- this deletes the database making onCreate() run.
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_pokedex, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 

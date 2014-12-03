@@ -1,6 +1,8 @@
-package com.randomapps.pokemontrivia;
+package com.randomapps.pokemondb;
 
 import android.content.Context;
+
+import com.randomapps.pokemonactivity.R;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,6 +15,9 @@ import java.util.ArrayList;
  * This class will hold all the schema information of the pokedex.db database
  */
 public class PokeSchemaService {
+
+    public static final String DB_NAME = "pokemon.db";
+    public static final int DB_VERSION = 1;
 
     private static PokeSchemaService singleInstance = null;
 
