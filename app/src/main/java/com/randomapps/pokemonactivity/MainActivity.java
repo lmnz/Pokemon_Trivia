@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-import com.randomapps.MainOnClickListeners.TriviaOnClickListener;
+import com.randomapps.mainlisteners.TriviaOnClickListener;
 
 
 public class MainActivity extends Activity {

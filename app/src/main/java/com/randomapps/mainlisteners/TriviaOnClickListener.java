@@ -1,4 +1,4 @@
-package com.randomapps.MainOnClickListeners;
+package com.randomapps.mainlisteners;
 
 import android.content.Context;
 import android.content.Intent;
