@@ -43,6 +43,7 @@ public class OptionListener implements View.OnClickListener {
         if (title == CORRECT) {
             bob.setPositiveButton("Yes", new OptionNewQuestionListener(activity));
             bob.setNegativeButton("No", new OptionCloseActivityListener(activity));
+            bob.setOnCancelListener(new OptionCancelCloseListener(activity));
         }
         else {
             bob.setPositiveButton("Yes", new OptionCloseActivityListener(activity));

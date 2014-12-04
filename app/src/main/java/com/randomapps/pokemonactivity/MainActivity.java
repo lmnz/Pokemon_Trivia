@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
 
         // POKEDEX BUTTON
         // Starts pokedex activity woop
-        final Button button = (Button) findViewById(R.id.pokedex);
+        final Button button = (Button) findViewById(R.id.trivia);
         button.setOnClickListener(new TriviaListener(this));
 
         // this.deleteDatabase("pokemon.db"); // <- this deletes the database making onCreate() run.

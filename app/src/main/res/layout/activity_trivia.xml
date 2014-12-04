@@ -4,90 +4,108 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:baselineAligned="false"
+    android:background="@color/white"
     tools:context="com.randomapps.pokemonactivity.TriviaActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+        <TextView android:text="@string/question"
+            android:id="@+id/question"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/list_item_vert_margin"
+            android:layout_marginTop="@dimen/list_item_vert_margin"
+            android:layout_marginLeft="@dimen/detail_horiz_margin"
+            android:layout_marginRight="@dimen/detail_horiz_margin" />
+    </RelativeLayout>
 
-    <TextView android:text="@string/hello_world"
-        android:id="@+id/question"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:baselineAligned="false" >
+            <RelativeLayout android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1">
 
-    <LinearLayout android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:baselineAligned="false" >
+                <ImageView android:id="@+id/first_pic"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:contentDescription="first option"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/image3"/>
 
-        <RelativeLayout android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1">
-
-            <ImageView android:id="@+id/first_pic"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:contentDescription="first option"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/image3"/>
-
-            <TextView android:text="@string/hello_world"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/first_pic"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/first_text"/>
+                <TextView android:text="@string/option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/first_pic"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/first_text"
+                    android:layout_marginBottom="@dimen/list_item_vert_margin"/>
 
 
-            <ImageView android:id="@+id/third_pic"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:contentDescription="first option"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/first_text"
-                android:src="@drawable/image9"/>
+                <ImageView android:id="@+id/third_pic"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:contentDescription="first option"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/first_text"
+                    android:src="@drawable/image9"
+                    android:layout_marginTop="@dimen/list_item_vert_margin"/>
 
-            <TextView android:text="@string/hello_world"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/third_pic"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/third_text"/>
+                <TextView android:text="@string/option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/third_pic"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/third_text"/>
 
-        </RelativeLayout>
+            </RelativeLayout>
 
-        <RelativeLayout android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1">
 
-            <ImageView android:id="@+id/second_pic"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:contentDescription="first option"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/image6"/>
+            <RelativeLayout android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1">
 
-            <TextView android:text="@string/hello_world"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/second_pic"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/second_text"/>
+                <ImageView android:id="@+id/second_pic"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:contentDescription="first option"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/image6"/>
 
-            <ImageView android:id="@+id/fourth_pic"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:contentDescription="fourth option"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/second_text"
-                android:src="@drawable/image150"/>
+                <TextView android:text="@string/option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/second_pic"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/second_text"
+                    android:layout_marginBottom="@dimen/list_item_vert_margin"/>
 
-            <TextView android:text="@string/hello_world"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/fourth_pic"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/fourth_text"/>
+                <ImageView android:id="@+id/fourth_pic"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:contentDescription="fourth option"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/second_text"
+                    android:src="@drawable/image150"
+                    android:layout_marginTop="@dimen/list_item_vert_margin"/>
 
-        </RelativeLayout>
-    </LinearLayout>
+                <TextView android:text="@string/option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fourth_pic"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/fourth_text"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
