@@ -10,7 +10,7 @@
 
     <!-- BUTTON TEXTS! -->
     <string name="trivia">Trivia</string>
-    <string name="pokedex">Pokédex</string>
+    <string name="pokedex">Pokédex (coming soon!)</string>
 
     <!-- COLORS! -->
     <color name="white">#FFFFFF</color>

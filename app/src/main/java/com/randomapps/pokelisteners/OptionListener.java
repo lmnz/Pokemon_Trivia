@@ -14,8 +14,8 @@ public class OptionListener implements View.OnClickListener {
     private Activity activity;
     private static final String CORRECT = "CORRECT!";
     private static final String INCORRECT = "INCORRECT!";
-    private static final String CORRECT_MSG = "Continue on road the to becoming a Pokémon Master?";
-    private static final String INCORRECT_MSG = "Do you want to give up?";
+    private static final String CORRECT_MSG = "Would you like to continue?";
+    private static final String INCORRECT_MSG = null;
     public OptionListener(Activity activity) {
         this.activity = activity;
     }
@@ -39,15 +39,14 @@ public class OptionListener implements View.OnClickListener {
 
     private AlertDialog setDialog(AlertDialog.Builder bob, String title, String msg) {
         bob.setTitle(title);
-        bob.setMessage(msg);
         if (title == CORRECT) {
+            bob.setMessage(msg);
             bob.setPositiveButton("Yes", new OptionNewQuestionListener(activity));
             bob.setNegativeButton("No", new OptionCloseActivityListener(activity));
             bob.setOnCancelListener(new OptionCancelCloseListener(activity));
         }
         else {
-            bob.setPositiveButton("Yes", new OptionCloseActivityListener(activity));
-            bob.setNegativeButton("No", null);
+            bob.setPositiveButton("Okay..", null);
         }
         return bob.create();
     }
