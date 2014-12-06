@@ -35,19 +35,4 @@ public class TriviaActivity extends Activity {
         return super.onOptionsItemSelected(item);
 
     }
-
-    @Override
-    public void onBackPressed() {
-        AlertDialog.Builder adb = new AlertDialog.Builder(this);
-        AlertDialog alert = setDialog(adb);
-        alert.show();
-    }
-
-    private AlertDialog setDialog(AlertDialog.Builder bob) {
-        bob.setTitle("Give up?");
-        bob.setMessage("Do you give up already?");
-        bob.setPositiveButton("YES", new OptionCloseActivityListener(this));
-        bob.setNegativeButton("NO", null);
-        return bob.create();
-    }
 }

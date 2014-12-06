@@ -4,4 +4,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="list_item_vert_margin">8dp</dimen>
     <dimen name="detail_horiz_margin">16dp</dimen>
+    <dimen name="logo_horiz_margin">32dp</dimen>
 </resources>

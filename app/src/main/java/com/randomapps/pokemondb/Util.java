@@ -11,6 +11,8 @@ import java.util.Random;
  * Created by wonkyulee on 12/2/14.
  */
 public class Util {
+
+    // Takes an ArrayList<Pokemon> and shuffles them!
     public static void shufflePokemons (ArrayList<Pokemon> candidates) {
         Log.v("Util.shufflePokemons()", "Everyday I'm shuffling!");
         Pokemon temp = null;

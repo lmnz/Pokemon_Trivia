@@ -9,24 +9,34 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:background="@color/white" >
         <ImageView android:id="@+id/logo"
             android:layout_height="match_parent"
             android:layout_width="fill_parent"
             android:src="@drawable/pokelogo"
             android:adjustViewBounds="true"
-            android:layout_marginLeft="@dimen/detail_horiz_margin"
-            android:layout_marginRight="@dimen/detail_horiz_margin"/>
+            android:layout_marginLeft="@dimen/logo_horiz_margin"
+            android:layout_marginRight="@dimen/logo_horiz_margin"/>
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="1"
         android:background="@color/white" >
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/score_filler"
+            android:layout_marginLeft="@dimen/detail_horiz_margin"
+            android:layout_marginRight="@dimen/detail_horiz_margin"
+            android:gravity="center"
+            />
         <Button
             android:id="@+id/trivia"
+            android:layout_below="@id/score"
             android:layout_height="wrap_content"
             android:layout_width="fill_parent"
             android:text="@string/trivia"

@@ -2,14 +2,18 @@ package com.randomapps.pokemonactivity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.randomapps.pokelisteners.TriviaListener;
+import com.randomapps.pokescore.ScoreKeeper;
 
 
 public class MainActivity extends Activity {
+
+    ScoreKeeper sk;
+    TextView score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,10 +22,18 @@ public class MainActivity extends Activity {
 
         // POKEDEX BUTTON
         // Starts pokedex activity woop
-        final Button button = (Button) findViewById(R.id.trivia);
-        button.setOnClickListener(new TriviaListener(this));
-
+        final Button trivia = (Button) findViewById(R.id.trivia);
+        trivia.setOnClickListener(new TriviaListener(this));
+        sk = ScoreKeeper.getScoreKeeper(this);
+        score = (TextView) findViewById(R.id.score);
+        score.setText(sk.getHighScoreString());
         // this.deleteDatabase("pokemon.db"); // <- this deletes the database making onCreate() run.
+    }
+
+    @Override
+    protected void onResume() {
+        score.setText(sk.getHighScoreString());
+        super.onResume();
     }
 
     @Override
