@@ -23,7 +23,8 @@ public class ScoreKeeper {
     private static final String scoreFileName = "score";
     private static FileOutputStream fos;
     private static FileInputStream fis;
-    private String scoreTemplate = "Hot Streak: ";
+    private String highScoreTemplate = "Hot Streak: ";
+    private String scoreTemplate = "Current Streak: ";
 
     private ScoreKeeper (Activity activity) {
         ScoreKeeper.activity = activity;
@@ -94,6 +95,12 @@ public class ScoreKeeper {
         score = 0;
     }
 
+    public void wipe() {
+        h_score = 0;
+        score = 0;
+        writeScore();
+    }
+
     public boolean gotItRight() {
         score++;
         return checkNewScore(score);
@@ -106,9 +113,12 @@ public class ScoreKeeper {
     public static int getHighScore() {
         return h_score;
     }
+    public String getCurrentScoreString() {
+        return scoreTemplate + new Integer(score).toString();
+    }
 
     public String getHighScoreString() {
-        return scoreTemplate + new Integer(h_score).toString();
+        return highScoreTemplate + new Integer(h_score).toString();
     }
 
 }

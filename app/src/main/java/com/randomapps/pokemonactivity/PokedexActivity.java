@@ -2,22 +2,25 @@ package com.randomapps.pokemonactivity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 
-import com.randomapps.pokemontrivia.TriviaOptionPopulator;
-import com.randomapps.pokescore.ScoreProjector;
+import com.randomapps.pokemonactivity.R;
 
-
-public class TriviaActivity extends Activity {
-
-    ScoreProjector ss;
+public class PokedexActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trivia);
-        TriviaOptionPopulator.setOptions(this);
-        ss = new ScoreProjector(this);
+        setContentView(R.layout.activity_pokedex);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_pokedex, menu);
+        return true;
     }
 
     @Override
@@ -33,12 +36,5 @@ public class TriviaActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-
-    }
-
-    @Override
-    public void onResume() {
-        ss.setTriviaScores();
-        super.onResume();
     }
 }

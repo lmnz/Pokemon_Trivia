@@ -26,7 +26,6 @@ public class MainActivity extends Activity {
         trivia.setOnClickListener(new TriviaListener(this));
         sk = ScoreKeeper.getScoreKeeper(this);
         score = (TextView) findViewById(R.id.score);
-        score.setText(sk.getHighScoreString());
         // this.deleteDatabase("pokemon.db"); // <- this deletes the database making onCreate() run.
     }
 

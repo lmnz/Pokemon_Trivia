@@ -17,7 +17,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TriviaActivity"
+            android:name="com.randomapps.pokemonactivity.TriviaActivity"
+            android:label="@string/title_activity_pokedex" >
+        </activity>
+        <activity
+            android:name="com.randomapps.pokemonactivity.PokedexActivity"
             android:label="@string/title_activity_pokedex" >
         </activity>
     </application>

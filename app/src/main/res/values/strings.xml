@@ -16,4 +16,6 @@
     <!-- COLORS! -->
     <color name="white">#FFFFFF</color>
 
+    <string name="hello_world">Hello world!</string>
+
 </resources>
