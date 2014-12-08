@@ -34,6 +34,7 @@
                     android:layout_width="fill_parent"
                     android:contentDescription="first option"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/detail_horiz_margin"
                     android:src="@drawable/image3"
                     android:scaleType="fitCenter"/>
             </LinearLayout>
