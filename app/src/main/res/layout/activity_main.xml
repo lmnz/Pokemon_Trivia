@@ -49,8 +49,7 @@
             android:layout_width="fill_parent"
             android:text="@string/pokedex"
             android:layout_marginLeft="@dimen/detail_horiz_margin"
-            android:layout_marginRight="@dimen/detail_horiz_margin"
-            style="?android:attr/borderlessButtonStyle" />
+            android:layout_marginRight="@dimen/detail_horiz_margin" />
     </RelativeLayout>
 
 </LinearLayout>

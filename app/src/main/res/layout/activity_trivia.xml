@@ -16,7 +16,8 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_marginLeft="@dimen/detail_horiz_margin"
-            android:layout_marginRight="@dimen/detail_horiz_margin" />
+            android:layout_marginRight="@dimen/detail_horiz_margin"
+            android:layout_marginTop="@dimen/list_item_vert_margin" />
         <TextView android:text="@string/score_filler"
             android:id="@+id/currentstreak"
             android:layout_below="@id/hotstreak"

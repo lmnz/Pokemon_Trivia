@@ -18,7 +18,7 @@
         </activity>
         <activity
             android:name="com.randomapps.pokemonactivity.TriviaActivity"
-            android:label="@string/title_activity_pokedex" >
+            android:label="@string/title_activity_trivia" >
         </activity>
         <activity
             android:name="com.randomapps.pokemonactivity.PokedexActivity"

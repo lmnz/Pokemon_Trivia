@@ -62,4 +62,20 @@ public class Pokeball {
         c.close();
         return result;
     }
+
+    public ArrayList<Pokemon> getAllPokemon() {
+        Cursor c = db.rawQuery("SELECT * FROM Pokedex", null);
+        c.moveToFirst();
+        ArrayList<Pokemon> result = new ArrayList<Pokemon>();
+        while (!c.isLast()) {
+            result.add(new Pokemon(c.getString(0), c.getString(1), c.getString(2), c.getString(3),
+                    c.getString(4), c.getString(5), c.getString(6)));
+            c.moveToNext();
+        }
+        // add the last pokemon
+        result.add(new Pokemon(c.getString(0), c.getString(1), c.getString(2), c.getString(3),
+                c.getString(4), c.getString(5), c.getString(6)));
+
+        return result;
+    }
 }

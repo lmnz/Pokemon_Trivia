@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.randomapps.pokelisteners.PokedexListener;
 import com.randomapps.pokelisteners.TriviaListener;
 import com.randomapps.pokescore.ScoreKeeper;
 
@@ -24,6 +25,8 @@ public class MainActivity extends Activity {
         // Starts pokedex activity woop
         final Button trivia = (Button) findViewById(R.id.trivia);
         trivia.setOnClickListener(new TriviaListener(this));
+        final Button pokedex = (Button) findViewById(R.id.pokedex);
+        pokedex.setOnClickListener(new PokedexListener(this));
         sk = ScoreKeeper.getScoreKeeper(this);
         score = (TextView) findViewById(R.id.score);
         // this.deleteDatabase("pokemon.db"); // <- this deletes the database making onCreate() run.
