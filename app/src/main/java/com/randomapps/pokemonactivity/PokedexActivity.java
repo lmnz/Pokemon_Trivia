@@ -14,8 +14,9 @@ import com.randomapps.pokemonactivity.R;
 
 public class PokedexActivity extends Activity {
 
-    ListView pokelist;
+    public static ListView pokelist;
     public static String currentLayout;
+    public static int index = 0, top = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,8 @@ public class PokedexActivity extends Activity {
         pokelist = (ListView) this.findViewById(R.id.pokelist);
         pokelist.setAdapter(new PokelistAdapter(this));
         pokelist.setOnItemClickListener(new PokedexEntryListener(this));
+        // load scroll state! (refer to PokedexEntryListener.saveScrollState()
+        pokelist.setSelectionFromTop(index, top);
         super.onResume();
     }
 
